@@ -1,6 +1,7 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Heart, TrendingUp, Shield, Users2, Sparkles, Target } from "lucide-react"
+import Navigation from "@/components/Navigation";
 
 const values = [
   { 
@@ -38,17 +39,17 @@ const values = [
 export default function AboutPage() {
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      <Navigation />
       
       <main className="flex-1">
         {/* Hero Section */}
         <section className="bg-secondary py-16 lg:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <h1 className="font-heading text-4xl sm:text-5xl font-semibold text-foreground mb-6">
+              <h1 className="font-heading text-4xl sm:text-5xl font-semibold text-white mb-6">
                 About Us
               </h1>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-[#C89A3D]">
                 Bridging wellbeing and performance in the world of work.
               </p>
             </div>
@@ -56,28 +57,31 @@ export default function AboutPage() {
         </section>
 
         {/* About HOK */}
-        <section className="py-16 lg:py-24">
+        <section className="py-16 lg:py-24 bg-[#F7F5F0]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <h2 className="font-heading text-3xl sm:text-4xl font-semibold text-foreground mb-8">
+            <div className="">
+              <h2 className="font-heading text-3xl sm:text-4xl font-semibold text-secondary mb-8">
                 House of Khathutshelo
               </h2>
-              <div className="space-y-6 text-muted-foreground leading-relaxed">
-                <p>
-                  House of Khathutshelo is an independent workplace wellbeing and organizational development practice dedicated to supporting individuals, teams, and institutions to function with clarity, resilience, and purpose.
-                </p>
-                <p>
-                  Rooted in Occupational Social Work, the practice takes a human-centered and systems-aware approach to the world of work, recognizing that employee wellbeing, leadership effectiveness, and organizational performance are deeply interconnected.
-                </p>
-                <p>
-                  We work with organizations to strengthen workplace culture, develop leadership capacity, and design initiatives that support both individual growth and collective performance.
-                </p>
-                <p>
-                  The name &ldquo;Khathutshelo,&rdquo; meaning forgiveness and mercy, reflects restoration, growth, and intentional development. It speaks to the belief that transformation, whether personal or organizational, requires both reflection and forward movement.
-                </p>
-                <p>
-                  At its core, House of Khathutshelo exists to bridge the gap between wellbeing and performance, bringing together human understanding, structured strategy, and purposeful action to shape healthier, more effective workplaces.
-                </p>
+              <div className="flex flex-col lg:flex-row gap-12">
+                <div className="space-y-6 text-muted-foreground leading-relaxed ">
+                  <p>
+                    House of Khathutshelo is an independent workplace wellbeing and organizational development practice dedicated to supporting individuals, teams, and institutions to function with clarity, resilience, and purpose.
+                  </p>
+                  <p>
+                    Rooted in Occupational Social Work, the practice takes a human-centered and systems-aware approach to the world of work, recognizing that employee wellbeing, leadership effectiveness, and organizational performance are deeply interconnected.
+                  </p>
+                  <p>
+                    We work with organizations to strengthen workplace culture, develop leadership capacity, and design initiatives that support both individual growth and collective performance.
+                  </p>
+                  <p>
+                    The name &ldquo;Khathutshelo,&rdquo; meaning forgiveness and mercy, reflects restoration, growth, and intentional development. It speaks to the belief that transformation, whether personal or organizational, requires both reflection and forward movement.
+                  </p>
+                  <p>
+                    At its core, House of Khathutshelo exists to bridge the gap between wellbeing and performance, bringing together human understanding, structured strategy, and purposeful action to shape healthier, more effective workplaces.
+                  </p>
+                </div>
+                <img src="/about_img_2.png" className="object-contain w-[500px]"/>
               </div>
             </div>
           </div>
@@ -86,27 +90,31 @@ export default function AboutPage() {
         {/* About Katu */}
         <section className="py-16 lg:py-24 bg-secondary">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <h2 className="font-heading text-3xl sm:text-4xl font-semibold text-foreground mb-8">
-                About Katu Thyala
-              </h2>
-              <div className="space-y-6 text-muted-foreground leading-relaxed">
-                <p>
-                  Katu Thyala is a qualified and registered social worker with a Master&apos;s degree in Occupational Social Work, specializing in workplace wellbeing, leadership development, and organizational effectiveness.
-                </p>
-                <p>
-                  With over five years of experience across employee assistance, healthcare, and corporate wellness environments, Katu brings a unique perspective that bridges human insight with organizational needs. Her work has spanned case management, employee support, and the design and facilitation of wellbeing and training initiatives for diverse teams and organizations.
-                </p>
-                <p>
-                  Through her experience in high-pressure and people-centered environments, Katu developed a strong understanding of how workplace systems, leadership, and culture directly impact individual wellbeing and performance. This insight has shaped her approach, moving beyond one-on-one support toward broader, preventative, and developmental strategies within organizations.
-                </p>
-                <p>
-                  Katu has facilitated wellbeing workshops, contributed to training and onboarding processes, and supported the implementation of psychosocial and employee wellness programs. Her work is grounded in practical, relatable engagement that enables individuals and teams to build resilience, strengthen capacity, and navigate the demands of the modern workplace.
-                </p>
-                <p className="font-medium text-foreground">
-                  She is driven by a clear belief: when organizations invest in people intentionally, both individuals and systems have the capacity to thrive.
-                </p>
+            <div className="flex flex-col lg:flex-row gap-12">
+              <img src="/katu_2.png" className="object-contain w-[500px]"/>
+              <div>
+                <h2 className="font-heading text-3xl sm:text-4xl font-semibold text-[#C89A3D] mb-8">
+                  About Katu Thyala
+                </h2>
+                <div className="space-y-6 text-white leading-relaxed">
+                  <p>
+                    Katu Thyala is a qualified and registered social worker with a Master&apos;s degree in Occupational Social Work, specializing in workplace wellbeing, leadership development, and organizational effectiveness.
+                  </p>
+                  <p>
+                    With over five years of experience across employee assistance, healthcare, and corporate wellness environments, Katu brings a unique perspective that bridges human insight with organizational needs. Her work has spanned case management, employee support, and the design and facilitation of wellbeing and training initiatives for diverse teams and organizations.
+                  </p>
+                  <p>
+                    Through her experience in high-pressure and people-centered environments, Katu developed a strong understanding of how workplace systems, leadership, and culture directly impact individual wellbeing and performance. This insight has shaped her approach, moving beyond one-on-one support toward broader, preventative, and developmental strategies within organizations.
+                  </p>
+                  <p>
+                    Katu has facilitated wellbeing workshops, contributed to training and onboarding processes, and supported the implementation of psychosocial and employee wellness programs. Her work is grounded in practical, relatable engagement that enables individuals and teams to build resilience, strengthen capacity, and navigate the demands of the modern workplace.
+                  </p>
+                  <p className="font-medium text-[#C89A3D]">
+                    She is driven by a clear belief: when organizations invest in people intentionally, both individuals and systems have the capacity to thrive.
+                  </p>
+                </div>
               </div>
+
             </div>
           </div>
         </section>
@@ -116,7 +124,7 @@ export default function AboutPage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-12">
               <div>
-                <h2 className="font-heading text-3xl font-semibold text-foreground mb-6">
+                <h2 className="font-heading text-3xl font-semibold mb-6 text-secondary">
                   Vision
                 </h2>
                 <p className="text-muted-foreground leading-relaxed">
@@ -124,7 +132,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <div>
-                <h2 className="font-heading text-3xl font-semibold text-foreground mb-6">
+                <h2 className="font-heading text-3xl font-semibold mb-6 text-secondary">
                   Mission
                 </h2>
                 <p className="text-muted-foreground leading-relaxed">
@@ -138,7 +146,7 @@ export default function AboutPage() {
         {/* Values */}
         <section className="py-16 lg:py-24 bg-secondary">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="font-heading text-3xl sm:text-4xl font-semibold text-foreground mb-12 text-center">
+            <h2 className="font-heading text-3xl sm:text-4xl font-semibold text-[#C89A3D] mb-12 text-center">
               Our Values
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -167,7 +175,6 @@ export default function AboutPage() {
                     alt="South African Council for Social Service Professions (SACSSP)" 
                     className="h-20 object-contain"
                   />
-                  <span className="text-sm text-muted-foreground">SACSSP</span>
                 </div>
                 <div className="flex flex-col items-center gap-3">
                   <img 
@@ -175,7 +182,6 @@ export default function AboutPage() {
                     alt="Board of Healthcare Funders (BHF) Southern Africa" 
                     className="h-14 object-contain"
                   />
-                  <span className="text-sm text-muted-foreground">BHF</span>
                 </div>
               </div>
               <p className="text-muted-foreground">

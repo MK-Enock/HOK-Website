@@ -64,12 +64,12 @@ export function Footer() {
               <img 
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-F6NKMFUVWeyNtHKcXanl0LJaKVfdPx.png" 
                 alt="South African Council for Social Service Professions (SACSSP)" 
-                className="h-10 object-contain object-left brightness-0 invert opacity-80"
+                className="h-10 object-contain object-left"
               />
               <img 
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-cikSff21N0E9UynlAm5L5WKW9zNpUS.png" 
                 alt="Board of Healthcare Funders (BHF) Southern Africa" 
-                className="h-8 object-contain object-left brightness-0 invert opacity-80"
+                className="h-8 object-contain object-left"
               />
             </div>
           </div>

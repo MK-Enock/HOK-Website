@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Mail, Phone, MapPin, Send } from "lucide-react"
+import Navigation from "@/components/Navigation";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -28,17 +29,17 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      <Navigation/>
       
       <main className="flex-1">
         {/* Hero Section */}
         <section className="bg-secondary py-16 lg:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <h1 className="font-heading text-4xl sm:text-5xl font-semibold text-foreground mb-6">
+              <h1 className="font-heading text-4xl sm:text-5xl font-semibold text-primary-gold mb-6">
                 Contact Us
               </h1>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-white">
                 For bookings, enquiries, or collaborations.
               </p>
             </div>
@@ -48,10 +49,10 @@ export default function ContactPage() {
         {/* Contact Content */}
         <section className="py-16 lg:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className="grid lg:grid-cols-2 gap-12 text-white">
               {/* Contact Info */}
               <div>
-                <h2 className="font-heading text-2xl font-semibold text-foreground mb-8">
+                <h2 className="font-heading text-2xl font-semibold text-primary-gold mb-8">
                   Get in Touch
                 </h2>
                 
@@ -128,7 +129,7 @@ export default function ContactPage() {
               {/* Contact Form */}
               <div>
                 <div className="bg-secondary rounded-lg p-8">
-                  <h2 className="font-heading text-2xl font-semibold text-foreground mb-6">
+                  <h2 className="font-heading text-2xl font-semibold text-white mb-6">
                     Send a Message
                   </h2>
                   
@@ -143,7 +144,7 @@ export default function ContactPage() {
                       </p>
                       <button
                         onClick={() => setSubmitted(false)}
-                        className="mt-4 text-primary text-sm font-medium hover:underline"
+                        className="mt-4 text-white text-sm font-medium hover:underline"
                       >
                         Send another message
                       </button>
@@ -151,7 +152,7 @@ export default function ContactPage() {
                   ) : (
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                        <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
                           Name
                         </label>
                         <input
@@ -166,7 +167,7 @@ export default function ContactPage() {
                       </div>
 
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                        <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                           Email
                         </label>
                         <input
@@ -181,7 +182,7 @@ export default function ContactPage() {
                       </div>
 
                       <div>
-                        <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                        <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
                           Message
                         </label>
                         <textarea

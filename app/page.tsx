@@ -3,20 +3,12 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Heart, Users, Target, Briefcase, ChevronRight, Menu, X } from 'lucide-react';
+import {Heart, Users, Target, Briefcase, ChevronRight, Menu, X} from 'lucide-react';
+import Navigation from "@/components/Navigation";
 
 export default function Home() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const navigationLinks = [
-    { label: 'Home', href: '#' },
-    { label: 'About', href: '#about' },
-    { label: 'Services', href: '#services', hasDropdown: true },
-    { label: 'Training & Facilitation', href: '#' },
-    { label: 'Projects', href: '#' },
-    { label: 'Resources', href: '#' },
-    { label: 'Contact', href: '#' },
-  ];
+
 
   const services = [
     {
@@ -50,67 +42,7 @@ export default function Home() {
 
   return (
       <main className="bg-[#F7F5F0]">
-        {/* Navigation */}
-        <nav className="sticky top-0 z-50 bg-white shadow-sm">
-          <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <div className="flex items-center gap-1">
-              <h2 className="text-2xl font-bold text-[#1E3A2D]">HOK</h2>
-              <p className="text-xs text-[#6F6F6F]">
-                Humanity • Opportunity • Knowledge
-              </p>
-            </div>
-
-            {/* Desktop Menu */}
-            <div className="hidden lg:flex items-center gap-8">
-              {navigationLinks.map((link) => (
-                  <Link
-                      key={link.label}
-                      href={link.href}
-                      className={`text-sm font-medium transition-colors ${
-                          link.label === 'Home'
-                              ? 'text-[#C89A3D] border-b-2 border-[#C89A3D]'
-                              : 'text-[#2A2A2A] hover:text-[#1E3A2D]'
-                      }`}
-                  >
-                    {link.label}
-                  </Link>
-              ))}
-              <button className="btn-primary cursor-pointer text-white">Let's Work Together</button>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button
-                className="lg:hidden"
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              {mobileMenuOpen ? (
-                  <X size={24} className="text-[#1E3A2D]" />
-              ) : (
-                  <Menu size={24} className="text-[#1E3A2D]" />
-              )}
-            </button>
-          </div>
-
-          {/* Mobile Menu */}
-          {mobileMenuOpen && (
-              <div className="lg:hidden bg-white border-t">
-                <div className="px-6 py-4 space-y-4">
-                  {navigationLinks.map((link) => (
-                      <Link
-                          key={link.label}
-                          href={link.href}
-                          className="block text-[#2A2A2A] hover:text-[#1E3A2D] font-medium"
-                          onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {link.label}
-                      </Link>
-                  ))}
-                  <button className="btn-primary cursor-pointer w-full">Let's Work Together</button>
-                </div>
-              </div>
-          )}
-        </nav>
-
+      <Navigation/>
         {/* Hero Section */}
         <section className="relative overflow-hidden">
           <div className=" lg:gap-0 items-center bg-[url('/hero_img_mobile.png')] md:bg-[url('/hero_bg_img.png')]">

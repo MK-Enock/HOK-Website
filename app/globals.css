@@ -35,7 +35,7 @@
   --primary: 165 30% 15%;
   --primary-foreground: 0 0% 98%;
 
-  --secondary: 165 24% 25%;
+  --secondary: 152.1, 31.8%, 17.3%;
   --secondary-foreground: 0 0% 98%;
 
   --muted: 0 0% 96.1%;
@@ -65,6 +65,8 @@
 ========================= */
 
 @theme {
+  --color-primary-gold: var(--accent-gold);
+  --color-primary-green: var(--primary-green);
   --color-background: hsl(var(--background-hsl));
   --color-foreground: hsl(var(--foreground-hsl));
 

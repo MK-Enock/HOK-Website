@@ -2,6 +2,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Heart, TrendingUp, Shield, Users2, Sparkles, Target } from "lucide-react"
 import Navigation from "@/components/Navigation";
+import Image from 'next/image';
 
 const values = [
   { 
@@ -81,7 +82,7 @@ export default function AboutPage() {
                     At its core, House of Khathutshelo exists to bridge the gap between wellbeing and performance, bringing together human understanding, structured strategy, and purposeful action to shape healthier, more effective workplaces.
                   </p>
                 </div>
-                <img src="/about_img_2.png" className="object-contain w-[500px]"/>
+                <Image src="/about_img_2.png" alt={"about_us image"} width={600} height={300} className="object-contain"/>
               </div>
             </div>
           </div>
@@ -91,7 +92,7 @@ export default function AboutPage() {
         <section className="py-16 lg:py-24 bg-secondary">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col lg:flex-row gap-12">
-              <img src="/katu_2.png" className="object-contain w-[500px]"/>
+              <img src="/katu_3.png" className="object-contain w-[500px]"/>
               <div>
                 <h2 className="font-heading text-3xl sm:text-4xl font-semibold text-[#C89A3D] mb-8">
                   About Katu Thyala

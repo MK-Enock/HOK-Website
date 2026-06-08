@@ -42,18 +42,20 @@ export default function Home() {
 
   return (
       <main className="bg-[#F7F5F0]">
-      <Navigation/>
+        <Navigation/>
         {/* Hero Section */}
         <section className="relative overflow-hidden">
-          <div className=" lg:gap-0 items-center bg-[url('/hero_img_mobile.png')] md:bg-[url('/hero_bg_img.png')]">
+          <div className=" lg:gap-0 items-center relative">
+            <Image src={"/hero_bg_img.png"} alt="hero_cover" className="absolute object-cover hidden lg:flex" fill />
+            <Image src={"/hero_img_mobile.png"} alt="hero_cover_mobile" className="absolute object-cover flex lg:hidden" fill />
             {/* Left Content */}
             <div className="relative z-10  max-w-7xl mx-auto px-6 py-16 lg:py-24 text-white">
-              <h1 className="text-4xl md:text-6xl mb-6 leading-none">
+              <h1 className="text-4xl md:text-6xl mb-6 leading-none animate__animated animate__backInDown">
                 <span>People. Communities.</span> <br/>
                 <span className="text-[#C89A3D]">Change that lasts.</span>
               </h1>
 
-              <p className="text-base md:text-lg text-gray-100 mb-8 leading-relaxed max-w-md">
+              <p className="text-base md:text-lg text-gray-100 mb-8 leading-relaxed max-w-md animate__animated animate__slideInLeft">
                 HOK is a social work and development practice that partners with
                 individuals, organisations and communities to create meaningful change
                 and build stronger, brighter futures.
@@ -75,7 +77,7 @@ export default function Home() {
               </div>
 
               {/* Quote Card Overlay */}
-              <div className="hidden lg:flex lg:flex-col absolute bottom-8 -right-28 bg-[#1E3A2D] bg-opacity-90 backdrop-blur-sm p-8 h-[300px] w-[320px] rounded-lg">
+              <div className="hidden lg:flex lg:flex-col absolute bottom-8 -right-28 bg-[#1E3A2D] bg-opacity-90 backdrop-blur-sm p-8 h-[300px] w-[320px] rounded-lg animate__animated animate__slideInRight">
                  <span className='text-[#C89A3D] '>
                   <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" className="bi bi-quote"
                        viewBox="0 0 16 16">
@@ -169,14 +171,14 @@ export default function Home() {
                       className="object-cover"
                   />
 
-                  <div className="absolute z-50 bottom-4 right-4 bg-[#C89A3D] rounded-lg p-8 flex gap-5 justify-center items-center text-white max-w-[300px]">
+                  <div className="absolute z-20 bottom-4 right-4 bg-[#C89A3D] rounded-lg p-8 flex gap-5 justify-center items-center text-white max-w-[300px]">
                     <div className="flex flex-col transition-all cursor-pointer">
                       <p className="font-medium mb-4">
                         Let's build something meaningful together.
                       </p>
                       <span className="">Contact us today</span>
                     </div>
-                    <div>
+                    <div className="bg-gray-500/60 p-4 rounded-full">
                       <ChevronRight className="w-5 h-5" />
                     </div>
                   </div>

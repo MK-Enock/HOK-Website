@@ -106,7 +106,7 @@ function FlipCard({ service, isFlipped, onClick }: {
     >
       <div className="flip-card-inner relative w-full h-full">
         {/* Front of card */}
-        <div className="flip-card-front absolute inset-0 bg-card border border-border rounded-lg p-6 flex flex-col items-center justify-center text-center hover:border-primary hover:shadow-md transition-all">
+        <div className="flip-card-front bg-[#F7F5F0] absolute inset-0 border border-border rounded-lg p-6 flex flex-col items-center justify-center text-center hover:border-primary hover:shadow-md transition-all">
           <service.icon className="h-12 w-12 text-accent mb-4" />
           <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
             {service.title}

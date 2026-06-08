@@ -2,7 +2,7 @@
 import Link from "next/link";
 import {Menu, X} from "lucide-react";
 import {useState} from "react";
-import {usePathname} from "next/navigation";
+import {usePathname, useRouter} from "next/navigation";
 
 const navigationLinks = [
     { label: 'Home', href: '/' },
@@ -11,17 +11,16 @@ const navigationLinks = [
     // { label: 'Training & Facilitation', href: '/training_&_facilitation' },
     // { label: 'Projects', href: '/projects' },
     { label: 'Resources', href: '/resources' },
-    { label: 'Contact', href: '/contact' },
+    // { label: 'Contact', href: '/contact' },
 ];
 
 export default function Navigation(){
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const pathname = usePathname()
-    return <div>
-        {/* Navigation */}
-        <nav className="sticky top-0 z-50 bg-white shadow-sm">
+    const router = useRouter()
+    return<nav className="sticky top-0 z-50 bg-white shadow-sm">
             <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-                <div className="flex flex-col items-center gap-1">
+                <div className="flex flex-col items-center gap-1 cursor-pointer" onClick={()=>router.push("/")}>
                     <h2 className="text-4xl font-bold text-[#1E3A2D]">HOK</h2>
                     <p className="text-xs text-[#6F6F6F]">
                         House • Of • Khathutshelo
@@ -43,7 +42,7 @@ export default function Navigation(){
                             {link.label}
                         </Link>
                     ))}
-                    <button className="btn-primary cursor-pointer text-white">Let's Work Together</button>
+                    <button onClick={()=>router.push("/contact")} className="btn-primary cursor-pointer text-white">Let's Work Together</button>
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -73,10 +72,9 @@ export default function Navigation(){
                                 {link.label}
                             </Link>
                         ))}
-                        <button className="btn-primary cursor-pointer w-full">Let's Work Together</button>
+                        <button className="btn-primary text-white cursor-pointer w-full">Let's Work Together</button>
                     </div>
                 </div>
             )}
         </nav>
-    </div>
 }

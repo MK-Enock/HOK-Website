@@ -3,6 +3,7 @@ import Link from "next/link";
 import {Menu, X} from "lucide-react";
 import {useState} from "react";
 import {usePathname, useRouter} from "next/navigation";
+import Image from "next/image"
 
 const navigationLinks = [
     { label: 'Home', href: '/' },
@@ -21,10 +22,11 @@ export default function Navigation(){
     return<nav className="sticky top-0 z-50 bg-white shadow-sm">
             <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
                 <div className="flex flex-col items-center gap-1 cursor-pointer" onClick={()=>router.push("/")}>
-                    <h2 className="text-4xl font-bold text-[#1E3A2D]">HOK</h2>
-                    <p className="text-xs text-[#6F6F6F]">
-                        House • Of • Khathutshelo
-                    </p>
+                    {/*<h2 className="text-4xl font-bold text-[#1E3A2D]">HOK</h2>*/}
+                    {/*<p className="text-xs text-[#6F6F6F]">*/}
+                    {/*    House • Of • Khathutshelo*/}
+                    {/*</p>*/}
+                    <Image src="/logo.png" alt="logo" width={120} height={40}/>
                 </div>
 
                 {/* Desktop Menu */}

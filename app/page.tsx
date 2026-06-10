@@ -5,39 +5,19 @@ import Link from 'next/link';
 import Image from 'next/image';
 import {Heart, Users, Target, Briefcase, ChevronRight, Menu, X} from 'lucide-react';
 import Navigation from "@/components/Navigation";
+import {services} from "@/lib/content";
+import {Footer} from "@/components/footer";
 
 export default function Home() {
 
 
 
-  const services = [
-    {
-      icon: Users,
-      title: 'Social Work Services',
-      description: 'Professional support for individuals, families and groups.',
-    },
-    {
-      icon: Target,
-      title: 'Training & Facilitation',
-      description: 'Workshops and training that build skills, confidence and capacity.',
-    },
-    {
-      icon: Heart,
-      title: 'Community Development',
-      description: 'Partnering with communities to identify needs and create solutions.',
-    },
-    {
-      icon: Briefcase,
-      title: 'Consulting & Support',
-      description: 'Strategic support for organisations and social impact initiatives.',
-    },
-  ];
 
   const heroServices = [
-    { icon: Heart, label: 'Community Development' },
+    { icon: Heart, label: 'Organizational Wellbeing & Development' },
     { icon: Target, label: 'Training & Facilitation' },
-    { icon: Users, label: 'Social Work Services' },
-    { icon: Briefcase, label: 'Consulting & Support' },
+    { icon: Users, label: 'Workplace Debriefing & Support' },
+    { icon: Briefcase, label: 'Individual Development & Career Growth' },
   ];
 
   return (
@@ -46,8 +26,8 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative overflow-hidden">
           <div className=" lg:gap-0 items-center relative">
-            <Image src={"/hero_bg_img.png"} alt="hero_cover" className="absolute object-cover hidden lg:flex" fill />
-            <Image src={"/hero_img_mobile.png"} alt="hero_cover_mobile" className="absolute object-cover flex lg:hidden" fill />
+            <Image src={"/hero_bg_large.png"} alt="hero_cover" className="absolute object-cover hidden lg:flex" fill />
+            <Image src={"/hero_bg_mobile.png"} alt="hero_cover_mobile" className="absolute object-cover flex lg:hidden" fill />
             {/* Left Content */}
             <div className="relative z-10  max-w-7xl mx-auto px-6 py-16 lg:py-24 text-white">
               <h1 className="text-4xl md:text-6xl mb-6 leading-none animate__animated animate__backInDown">
@@ -69,7 +49,7 @@ export default function Home() {
               {/* Service Highlights */}
               <div className="grid grid-cols-2 lg:grid-cols-[repeat(4,200px)] gap-12">
                 {heroServices.map((service, index) => (
-                    <div key={index} className="flex items-center gap-3 max-w-[200px]">
+                    <div key={index} className="flex gap-3 max-w-[200px]">
                       <service.icon className="w-10 h-10 text-[#C89A3D] flex-shrink-0" />
                       <span className="text-lg">{service.label}</span>
                     </div>
@@ -204,7 +184,7 @@ export default function Home() {
                       {service.title}
                     </h3>
                     <p className="text-[#6F6F6F] text-sm leading-relaxed">
-                      {service.description}
+                      {service.shortDescription}
                     </p>
                   </div>
               ))}
@@ -212,44 +192,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Footer */}
-        <footer className="bg-[#1E3A2D] text-white py-12 px-6">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-              <div>
-                <h3 className="font-bold mb-4">HOK</h3>
-                <p className="text-sm text-gray-300">
-                  Humanity • Opportunity • Knowledge
-                </p>
-              </div>
-              <div>
-                <h4 className="font-bold mb-4 text-[#C89A3D]">Quick Links</h4>
-                <ul className="space-y-2 text-sm">
-                  <li><Link href="#" className="text-gray-300 hover:text-[#C89A3D] transition">About</Link></li>
-                  <li><Link href="#" className="text-gray-300 hover:text-[#C89A3D] transition">Services</Link></li>
-                  <li><Link href="#" className="text-gray-300 hover:text-[#C89A3D] transition">Contact</Link></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-bold mb-4 text-[#C89A3D]">Services</h4>
-                <ul className="space-y-2 text-sm">
-                  <li><Link href="#" className="text-gray-300 hover:text-[#C89A3D] transition">Social Work</Link></li>
-                  <li><Link href="#" className="text-gray-300 hover:text-[#C89A3D] transition">Training</Link></li>
-                  <li><Link href="#" className="text-gray-300 hover:text-[#C89A3D] transition">Community Dev</Link></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-bold mb-4 text-[#C89A3D]">Contact</h4>
-                <p className="text-sm text-gray-300">Email: info@hok.org</p>
-                <p className="text-sm text-gray-300">Phone: +1 (555) 123-4567</p>
-              </div>
-            </div>
-
-            <div className="border-t border-[#2D4A3A] pt-8 text-center text-sm text-gray-400">
-              <p>&copy; 2024 HOK. All rights reserved.</p>
-            </div>
-          </div>
-        </footer>
+       <Footer/>
       </main>
   );
 }

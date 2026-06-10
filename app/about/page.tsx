@@ -3,6 +3,7 @@ import { Footer } from "@/components/footer"
 import { Heart, TrendingUp, Shield, Users2, Sparkles, Target } from "lucide-react"
 import Navigation from "@/components/Navigation";
 import Image from 'next/image';
+import {about_us} from "@/lib/content";
 
 const values = [
   { 
@@ -66,23 +67,13 @@ export default function AboutPage() {
               </h2>
               <div className="flex flex-col lg:flex-row gap-12">
                 <div className="space-y-6 text-muted-foreground leading-relaxed ">
-                  <p>
-                    House of Khathutshelo is an independent workplace wellbeing and organizational development practice dedicated to supporting individuals, teams, and institutions to function with clarity, resilience, and purpose.
-                  </p>
-                  <p>
-                    Rooted in Occupational Social Work, the practice takes a human-centered and systems-aware approach to the world of work, recognizing that employee wellbeing, leadership effectiveness, and organizational performance are deeply interconnected.
-                  </p>
-                  <p>
-                    We work with organizations to strengthen workplace culture, develop leadership capacity, and design initiatives that support both individual growth and collective performance.
-                  </p>
-                  <p>
-                    The name &ldquo;Khathutshelo,&rdquo; meaning forgiveness and mercy, reflects restoration, growth, and intentional development. It speaks to the belief that transformation, whether personal or organizational, requires both reflection and forward movement.
-                  </p>
-                  <p>
-                    At its core, House of Khathutshelo exists to bridge the gap between wellbeing and performance, bringing together human understanding, structured strategy, and purposeful action to shape healthier, more effective workplaces.
-                  </p>
+                  {about_us.map((paragraph, index)=>{
+                    return <p key={index}>
+                      {paragraph}
+                    </p>
+                  })}
                 </div>
-                <Image src="/about_img_2.png" alt={"about_us image"} width={600} height={300} className="object-contain"/>
+                {/*<Image src="/about_img_2.png" alt={"about_us image"} width={600} height={300} className="object-contain"/>*/}
               </div>
             </div>
           </div>
@@ -92,7 +83,7 @@ export default function AboutPage() {
         <section className="py-16 lg:py-24 bg-secondary">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col lg:flex-row gap-12">
-              <img src="/katu_3.png" className="object-contain w-[500px]"/>
+              <img src="/katu_no_qualification.png" className="object-contain w-[500px]"/>
               <div>
                 <h2 className="font-heading text-3xl sm:text-4xl font-semibold text-[#C89A3D] mb-8">
                   About Katu Thyala

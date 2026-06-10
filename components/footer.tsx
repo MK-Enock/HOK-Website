@@ -3,18 +3,18 @@ import { Mail, Phone, MapPin } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="bg-accent text-accent-foreground">
+    <footer className="bg-primary-green text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <h3 className="font-heading text-xl font-semibold mb-4">
+            <h3 className="font-heading text-xl font-semibold mb-4 text-primary-gold">
               House of Khathutshelo
             </h3>
-            <p className="text-accent-foreground/80 text-sm max-w-md mb-6">
+            <p className=" text-sm max-w-md mb-6">
               A workplace wellbeing and organizational development practice supporting individuals and organizations to grow, function, and thrive in the world of work.
             </p>
-            <div className="flex flex-col gap-2 text-sm text-accent-foreground/80">
+            <div className="flex flex-col gap-2 text-sm ">
               <a href="mailto:Houseofkhatutshelo@outlook.com" className="flex items-center gap-2 hover:text-accent-foreground transition-colors">
                 <Mail className="h-4 w-4" />
                 Houseofkhatutshelo@outlook.com
@@ -32,25 +32,25 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-medium mb-4">Quick Links</h4>
+            <h4 className="font-medium mb-4 text-primary-gold">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/about" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors">
+                <Link href="/about" className=" hover:text-accent-foreground transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors">
+                <Link href="/services" className=" hover:text-accent-foreground transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/resources" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors">
+                <Link href="/resources" className=" hover:text-accent-foreground transition-colors">
                   Resources
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors">
+                <Link href="/contact" className=" hover:text-accent-foreground transition-colors">
                   Contact
                 </Link>
               </li>
@@ -59,7 +59,7 @@ export function Footer() {
 
           {/* Affiliations */}
           <div>
-            <h4 className="font-medium mb-4">Affiliations</h4>
+            <h4 className="font-medium mb-4 text-primary-gold">Affiliations</h4>
             <div className="flex flex-col gap-4">
               <img 
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-F6NKMFUVWeyNtHKcXanl0LJaKVfdPx.png" 
@@ -75,7 +75,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-accent-foreground/20 text-center text-sm text-accent-foreground/70">
+        <div className="mt-12 pt-8 border-t border-gray-500/20 text-center text-sm">
           <p>&copy; {new Date().getFullYear()} House of Khathutshelo. All rights reserved.</p>
         </div>
       </div>

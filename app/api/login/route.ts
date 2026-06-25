@@ -28,7 +28,6 @@ export async function POST(request: NextRequest) {
             );
         }
 
-        // Generate token
         const token = uuidv4();
 
         const response = NextResponse.json({
